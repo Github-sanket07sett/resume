@@ -6,11 +6,11 @@
     font-family: sans-serif
 }
 .body{
-    overflow: hidden;
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    width: 1200px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,7 +18,7 @@
 }
 
 .header{
-   
+
     top: 0;
     left: 0;
     width:100%;
@@ -36,7 +36,14 @@
     text-decoration: none;
     font-weight: bold;
     padding-left: 10%;
+    transition: color 0.5s ease-in-out;
 }
+
+.logo:hover{
+    color:#f4efee;
+}
+
+
 
 .navbar a{
     font-size:18px;
@@ -96,12 +103,13 @@
 width: 100%;
 padding-left: 10%;
 border-radius: 60%;
-padding-top: 10%;
+padding-top: 30%;
 margin-right: 10%;
-background-size: cover;
-    background-position: center;
-    animation: image-float 2s ease-in-out forwards infinite;
+background-size:cover;
+background-position: center;
+animation: image-float 2s ease-in-out forwards infinite;
 }
+
 @keyframes image-float {
     0% {
         transform: translateY(0);
@@ -111,6 +119,19 @@ background-size: cover;
     }
     100% {
         transform: translateY(0);
+    }
+}
+@media only screen and (max-width: 500px){
+    @keyframes image-float {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-100px);
+        }
+        100% {
+            transform: translateY(0);
+        }
     }
 }
 /* Media query for screens with a width of 768px or less */
@@ -482,8 +503,11 @@ border-style: groove;
     text-align: center;
     font-size: 40px;
     padding-top: 10px;
+    transition: color 0.5s ease-in-out;
  }
- 
+.Contact:hover{
+    color: #f75d09;
+} 
  form { 
     margin-left: 32%;
     flex-direction: column;
